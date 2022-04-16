@@ -1,8 +1,8 @@
 import {BsFillBagXFill} from "react-icons/bs";
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 const Task = ({task,removeTask,toggleDone}) => {
   return (
-<TaskStyle isDone={task.isDone} onClick={() => toggleDone(task.id)}>
+<TaskStyle isDone={task.isDone} onDoubleClick={() => toggleDone(task.id)}>
         <Cursor>{task.text} <BsFillBagXFill style={{color:"red", cursor:"pointer"}}
       onClick={()=> removeTask(task.id)}/></Cursor>
       <p>{task.date}</p>
